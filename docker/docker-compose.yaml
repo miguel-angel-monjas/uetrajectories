@@ -1,0 +1,19 @@
+---
+version: '3.5'
+services:
+  prediction-server:
+    build: .
+    image: mobility_model:0.1.0
+    hostname: prediction-server
+    container_name: prediction-server
+    networks:
+    - core-net
+    ports:
+    - 9002:9002
+    environment:
+      LOGGING_LEVEL: INFO
+
+networks:
+  core-net:
+    driver: bridge
+    name: core-net

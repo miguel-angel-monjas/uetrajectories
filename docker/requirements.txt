@@ -1,0 +1,6 @@
+fastapi
+joblib
+pydantic
+pyyaml
+sklearn
+uvicorn
