@@ -1,0 +1,6 @@
+fastapi
+numpy
+onnxruntime
+pydantic
+pyyaml
+uvicorn

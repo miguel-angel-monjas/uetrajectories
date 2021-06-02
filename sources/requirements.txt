@@ -1,0 +1,7 @@
+auto-sklearn
+joblib
+onnxoptimizer
+onnxruntime
+pandas
+scikit-learn
+skl2onnx

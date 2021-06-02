@@ -1,0 +1,16 @@
+.dockerignore
+.env
+.gitignore
+Dockerfile*
+docker-compose.yaml
+**/*ipynb
+training/*.json
+*ipynb
+*json
+.git/
+.idea/
+.vscode/
+**/.ipynb_checkpoints/
+__pycache__/
+tests/
+rest_api/
