@@ -1,4 +1,3 @@
-auto-sklearn
 joblib
 onnxoptimizer
 onnxruntime
