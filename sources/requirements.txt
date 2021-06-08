@@ -1,4 +1,5 @@
 joblib
+matplotlib
 onnxoptimizer
 onnxruntime
 pandas
