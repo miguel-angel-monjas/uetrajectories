@@ -37,12 +37,14 @@ def get_configuration(config_folder='config', config_file_name='config.yaml'):
         with open(config_file_path, 'r') as f:
             try:
                 config = yaml.safe_load(f)
-                #log.info(config)
                 config_content = yaml.dump(config, default_flow_style=False)
                 config_content = config_content.replace('\n- ', '\n\n- ')
                 log.info("Configuration file contents:")
                 for line in config_content.strip().split('\n'):
                     log.info(f"+ {line}")
+                config['namespace_name'] = os.getenv('NAMESPACE_NAME', '')
+                config['node_name'] = os.getenv('NODE_NAME', '')
+                config['pod_name'] = os.getenv('POD_NAME', '')
                 return config
             except yaml.YAMLError as error:
                 log.error(f"{error}")

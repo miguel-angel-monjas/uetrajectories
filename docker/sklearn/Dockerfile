@@ -1,9 +1,11 @@
 FROM python:3.7-slim
 
+LABEL maintainer="miguel-angel-monjas@github"
+
 # Build image:
-#   docker build -t mobility_model:0.1.0 .
+#   docker build -t mobility_model:0.1.1 .
 # Run image:
-#   docker run -d --name model -p 9002:9002 --env LOGGING_LEVEL=DEBUG mobility_model:0.1.0
+#   docker run -d --name model -p 5000:5000 -p 9002:9002 --env LOGGING_LEVEL=DEBUG mobility_model:0.1.1
 
 RUN apt-get clean && \
     apt-get update -qy && \
@@ -19,6 +21,7 @@ RUN python -m pip install --upgrade pip && \
 
 COPY . .
 
+EXPOSE 5000
 EXPOSE 9002
 
 RUN chmod +x ./start.sh

@@ -1,6 +1,7 @@
 fastapi
 numpy
 onnxruntime
+prometheus-client
 pydantic
 pyyaml
 uvicorn

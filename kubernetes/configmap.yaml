@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: name-of-model-configmap_to-be-set
+  namespace: uetrajectories
+  labels:
+    app.kubernetes.io/name: name-of-model_to-be-set
+data:
+  config.yaml: |-
+    model_file: mobility_model.pkl
+    exposed_port: 9002
+    api_basepath: /mobility-model/v1
+    prediction_endpoint: /predict
+    instrumentation_port: 5000

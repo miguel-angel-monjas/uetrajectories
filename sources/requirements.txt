@@ -3,5 +3,6 @@ matplotlib
 onnxoptimizer
 onnxruntime
 pandas
+prometheus-client
 scikit-learn
 skl2onnx

@@ -5,6 +5,7 @@ import logging
 
 import uvicorn
 from fastapi import FastAPI
+from prometheus_client import start_http_server
 
 from config import get_configuration
 from backend.predict_api import router
@@ -13,6 +14,8 @@ log = logging.getLogger('mobility_model')
 
 configuration = get_configuration()
 
+
+start_http_server(configuration["instrumentation_port"])
 
 app = FastAPI()
 app.include_router(router,

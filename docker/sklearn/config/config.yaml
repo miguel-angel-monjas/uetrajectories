@@ -3,3 +3,4 @@ model_file: mobility_model.pkl
 exposed_port: 9002
 api_basepath: /mobility-model/v1
 prediction_endpoint: /predict
+instrumentation_port: 5000
